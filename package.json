@@ -1,5 +1,5 @@
 {
-  "name": "translator",
+  "name": "toolbox",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,10 +11,12 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.78.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.576.0",
     "next": "16.1.6",
+    "openai": "^6.25.0",
     "radix-ui": "^1.4.3",
     "react": "19.2.3",
     "react-dom": "19.2.3",

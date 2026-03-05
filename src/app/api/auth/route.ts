@@ -1,9 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
+import {
+  COOKIE_NAME,
+  COOKIE_MAX_AGE,
+  generateSessionToken,
+} from "@/lib/auth";
 
 export const dynamic = "force-dynamic";
-
-const COOKIE_NAME = "translator_auth";
-const COOKIE_MAX_AGE = 60 * 60 * 24 * 30; // 30 days
 
 export async function POST(request: NextRequest) {
   const { password } = await request.json();
@@ -23,10 +25,12 @@ export async function POST(request: NextRequest) {
     );
   }
 
+  const token = generateSessionToken(validPassword);
   const response = NextResponse.json({ success: true });
-  response.cookies.set(COOKIE_NAME, validPassword, {
+  response.cookies.set(COOKIE_NAME, token, {
     httpOnly: true,
     sameSite: "strict",
+    secure: process.env.NODE_ENV === "production",
     maxAge: COOKIE_MAX_AGE,
     path: "/",
   });

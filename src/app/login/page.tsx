@@ -40,7 +40,7 @@ export default function LoginPage() {
     <div className="min-h-screen flex items-center justify-center">
       <div className="w-full max-w-sm space-y-6 px-4">
         <div className="text-center">
-          <h1 className="text-2xl font-bold">Translator</h1>
+          <h1 className="text-2xl font-bold">Toolbox</h1>
           <p className="text-sm text-muted-foreground mt-1">
             Enter password to continue
           </p>

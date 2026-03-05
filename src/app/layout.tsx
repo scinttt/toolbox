@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Translator",
-  description: "Chinese-English bidirectional translator",
+  title: "Toolbox",
+  description: "Translator & Voice Transcription Tools",
 };
 
 export default function RootLayout({
