@@ -35,23 +35,6 @@ export default function AudioRecorder({
 
   return (
     <div className="flex items-center justify-center gap-4 py-3 shrink-0">
-      {/* Copy button */}
-      <Button
-        variant="outline"
-        size="icon"
-        className="h-10 w-10 rounded-full"
-        onClick={onCopy}
-        disabled={!canCopy}
-        aria-label="Copy output"
-        title="Copy output"
-      >
-        {copied ? (
-          <Check className="h-4 w-4 text-green-500" />
-        ) : (
-          <Copy className="h-4 w-4" />
-        )}
-      </Button>
-
       {/* Record / Stop button — classic red circle */}
       {isIdle && (
         <button
@@ -82,6 +65,23 @@ export default function AudioRecorder({
           <div className="h-6 w-6 border-2 border-muted-foreground/30 border-t-muted-foreground rounded-full animate-spin" />
         </div>
       )}
+
+      {/* Copy button */}
+      <Button
+        variant="outline"
+        size="icon"
+        className="h-10 w-10 rounded-full"
+        onClick={onCopy}
+        disabled={!canCopy}
+        aria-label="Copy output"
+        title="Copy output"
+      >
+        {copied ? (
+          <Check className="h-4 w-4 text-green-500" />
+        ) : (
+          <Copy className="h-4 w-4" />
+        )}
+      </Button>
     </div>
   );
 }
