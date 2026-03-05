@@ -13,92 +13,51 @@ export default function AppleIcon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+          background: "#000000",
           borderRadius: 38,
         }}
       >
-        {/* Back card - Chinese */}
+        {/* White badge with T cutout */}
         <div
           style={{
-            position: "absolute",
-            top: 26,
-            left: 20,
-            width: 92,
-            height: 64,
-            background: "rgba(255,255,255,0.25)",
-            borderRadius: 10,
+            width: 104,
+            height: 104,
+            background: "#ffffff",
+            borderRadius: 16,
+            overflow: "hidden",
             display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            fontSize: 36,
-            fontWeight: 800,
-            color: "rgba(255,255,255,0.9)",
+            position: "relative",
           }}
         >
-          中
+          {/* Left cutout */}
+          <div
+            style={{
+              position: "absolute",
+              top: 29,
+              left: 0,
+              width: 40,
+              height: 75,
+              background: "#000000",
+              borderTopRightRadius: 5,
+              borderBottomLeftRadius: 16,
+              display: "flex",
+            }}
+          />
+          {/* Right cutout */}
+          <div
+            style={{
+              position: "absolute",
+              top: 29,
+              right: 0,
+              width: 40,
+              height: 75,
+              background: "#000000",
+              borderTopLeftRadius: 5,
+              borderBottomRightRadius: 16,
+              display: "flex",
+            }}
+          />
         </div>
-        {/* Front card - English */}
-        <div
-          style={{
-            position: "absolute",
-            bottom: 26,
-            right: 20,
-            width: 92,
-            height: 64,
-            background: "rgba(255,255,255,0.9)",
-            borderRadius: 10,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            fontSize: 32,
-            fontWeight: 800,
-            color: "#764ba2",
-            boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
-          }}
-        >
-          En
-        </div>
-        {/* Arrow line */}
-        <div
-          style={{
-            position: "absolute",
-            top: 84,
-            left: 82,
-            width: 20,
-            height: 3,
-            background: "rgba(255,255,255,0.8)",
-            borderRadius: 2,
-            display: "flex",
-          }}
-        />
-        {/* Arrow head top-right */}
-        <div
-          style={{
-            position: "absolute",
-            top: 79,
-            left: 94,
-            width: 8,
-            height: 8,
-            borderTop: "3px solid rgba(255,255,255,0.8)",
-            borderRight: "3px solid rgba(255,255,255,0.8)",
-            transform: "rotate(45deg)",
-            display: "flex",
-          }}
-        />
-        {/* Arrow head bottom-left */}
-        <div
-          style={{
-            position: "absolute",
-            top: 82,
-            left: 80,
-            width: 8,
-            height: 8,
-            borderBottom: "3px solid rgba(255,255,255,0.8)",
-            borderLeft: "3px solid rgba(255,255,255,0.8)",
-            transform: "rotate(45deg)",
-            display: "flex",
-          }}
-        />
       </div>
     ),
     { ...size }
