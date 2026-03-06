@@ -117,16 +117,6 @@ src/
 
 See [docs/design.md](docs/design.md) for detailed architecture and design decisions.
 
-## Roadmap
-
-- [ ] SSE streaming for real-time translation progress on long texts
-- [ ] Source language auto-detection with manual override
-- [ ] Source = target language conflict warning
-- [ ] Backend database + user auth for cross-device vocabulary sync
-- [ ] Runtime schema validation (Zod) for LLM responses
-- [ ] Bounded request timeouts with proper error mapping
-- [ ] Dark mode
-
 ## License
 
 [MIT](LICENSE)
