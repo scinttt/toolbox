@@ -16,8 +16,12 @@ A personal productivity web app featuring **Chinese-English bidirectional transl
 
 ### Voice Transcription
 
-- Record audio and transcribe to text
-- Powered by Whisper API
+- Record audio and transcribe to text via OpenAI Whisper
+- AI-powered text cleanup with two output modes:
+  - **AI Prompt** - compressed, filler-free, optimized for LLM input
+  - **Article** - preserves paragraph structure and natural language flow
+- Real-time waveform visualization during recording
+- Editable output with one-click copy
 
 ## Tech Stack
 
@@ -57,6 +61,7 @@ Fill in your API keys in `.env.local`:
 ```
 DEEPSEEK_API_KEY=sk-xxx
 DEEPL_API_KEY=xxx
+OPENAI_API_KEY=sk-xxx
 BASIC_AUTH_PASS=your-password-here
 ```
 
@@ -67,6 +72,27 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
+
+## Usage
+
+Log in with the password you set in `BASIC_AUTH_PASS`. The app has two tabs: **Translator** and **Voice**.
+
+### Translator
+
+1. Type or paste text in the left panel
+2. Select source and target languages
+3. Click the translate button (or press Enter)
+
+The app automatically detects your input:
+- **Single word** (e.g. "hello", "苹果") → shows a dictionary card with phonetics, audio, definitions, and examples. Click the star icon to save it to your vocabulary book.
+- **Phrase or paragraph** → returns a full translation in the right panel.
+
+### Voice
+
+1. Choose an output mode: **AI Prompt** (concise, LLM-ready) or **Article** (natural paragraphs)
+2. Click the red record button and speak
+3. Click stop — the app transcribes your audio, then cleans up the text automatically
+4. Edit the result if needed, then click copy
 
 ## Project Structure
 
